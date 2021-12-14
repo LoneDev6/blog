@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkblog=self.webpackChunkblog||[]).push([[535],{5641:function(e){e.exports=JSON.parse('{"title":"Recent posts","items":[{"title":"The future of ItemsAdder","permalink":"/blog/future-of-itemsadder"},{"title":"\u26a1 Optimize Minecraft client","permalink":"/blog/optimize-minecraft"}]}')}}]);

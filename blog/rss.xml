@@ -22,12 +22,15 @@ This is a very long task due to the fact that this plugin offers more than 500 d
 I also plan to hook into the Minecraft gameplay itself and fix all the unbalanced features of the vanilla gameplay. Sadly this game has a lot of flaws which allow users to <a href="https://www.speedrun.com/mc/run/zq13899m">speedrun it in no time</a>.</p><p>One of the last important tasks I have scheduled is to find a proper way to avoid spamming customers which are contacting me everyday to ask basic questions. Right now I have no solution as this is the problem every developer has with this community.</p>]]></content:encoded>
         </item>
         <item>
-            <title><![CDATA[Optimize Minecraft client]]></title>
+            <title><![CDATA[⚡ Optimize Minecraft client]]></title>
             <link>https://blog.devs.beer/blog/optimize-minecraft</link>
             <guid>optimize-minecraft</guid>
             <pubDate>Tue, 14 Dec 2021 00:00:00 GMT</pubDate>
-            <description><![CDATA[How to optimize it]]></description>
-            <content:encoded><![CDATA[<h2>How to optimize it</h2><h3>1. Downloading Fabric</h3><p>First you have to <a href="https://fabricmc.net/use/">download</a> <strong>Fabric</strong> and install it.<br/>
+            <description><![CDATA[Minecraft is slow]]></description>
+            <content:encoded><![CDATA[<h2>Minecraft is slow</h2><p>:::info
+<strong>Minecraft</strong> is known to be very heavy, the community had fixed most of its problems.<br/>
+My plugins don&#x27;t require this mod. This is an optional tutorial for who wants to optimize their game, because it is slow.
+:::</p><h3>1. Downloading Fabric</h3><p>First you have to <a href="https://fabricmc.net/use/">download</a> <strong>Fabric</strong> and install it.<br/>
 Click on the &quot;<strong>Download installer</strong>&quot; button:</p><p><img src="imgs/1.png"/></p><h3>2. Edit the profile folder (optional step)</h3><p>Click on &quot;<strong>installations</strong>&quot;, then press on &quot;<strong>edit</strong>&quot; under the &quot;<strong>Fabric</strong>&quot; installation.</p><p><img src="imgs/3.png"/></p><p>Change the folder to a new one, for example I created a new profile folder called <code>Fabric</code> inside <code>.minecraft</code>.</p><p><img src="imgs/4.png"/></p><h3>3. Install the optimization mod</h3><p>Download the mod <a href="https://www.curseforge.com/minecraft/modpacks/fabulously-optimized/files/3559545">here</a></p><p>Open the zip and extract the folders <code>mods</code> and <code>config</code> inside your <code>.minecraft</code> folder (or inside the <strong>Fabric</strong> profile folder).</p><h3>4. Run Fabric</h3>]]></content:encoded>
         </item>
     </channel>
