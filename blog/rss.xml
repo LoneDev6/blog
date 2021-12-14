@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+    <channel>
+        <title>LoneDev's Blog Blog</title>
+        <link>https://blog.devs.beer/blog</link>
+        <description>LoneDev's Blog Blog</description>
+        <lastBuildDate>Tue, 14 Dec 2021 00:00:00 GMT</lastBuildDate>
+        <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
+        <generator>https://github.com/jpmonette/feed</generator>
+        <item>
+            <title><![CDATA[First blog post]]></title>
+            <link>https://blog.devs.beer/blog/first-post</link>
+            <guid>first-post</guid>
+            <pubDate>Tue, 14 Dec 2021 00:00:00 GMT</pubDate>
+            <description><![CDATA[Welcome to my blog!]]></description>
+            <content:encoded><![CDATA[<p>Welcome to my blog!</p>]]></content:encoded>
+        </item>
+        <item>
+            <title><![CDATA[The future of ItemsAdder]]></title>
+            <link>https://blog.devs.beer/blog/future-of-itemsadder</link>
+            <guid>future-of-itemsadder</guid>
+            <pubDate>Tue, 14 Dec 2021 00:00:00 GMT</pubDate>
+            <description><![CDATA[ItemsAdder]]></description>
+            <content:encoded><![CDATA[<h2>ItemsAdder</h2><p><a href="https://www.spigotmc.org/resources/73355/">ItemsAdder</a> is my most successful product. It&#x27;s a plugin for <a href="https://www.spigotmc.org/">Spigot</a> servers which allows admins to extend the game without modding the client.</p><h2>First days</h2><p>The plugin was published initially on 2016 and was called NewItems, it was one of my very first Java projects and I was a newbie on Spigot development.<br/>
+I abandoned the old project after a year or so due to personal life, but then I picked it back up and started working on the very new version which ended up begin renamed ItemsAdder. As you know this version has more features, has a totally different structure and allows to achieve extreme customization of the game.</p><h2>Current days</h2><p>I didn&#x27;t expect this much fame for that single product, the <a href="https://bstats.org/plugin/bukkit/ItemsAdder/7023">max peak</a> of servers which use ItemsAdder amounts to <strong>1097 max online servers</strong> and <strong>3800 max players</strong> enjoying the plugin.<br/>
+ItemsAdder is in the <a href="https://i.imgur.com/m3edZ8T.png">top 3</a> of the best voted paid Spigot plugins to this date, which is unbelievable, a plugin published in 2019 managed to reach the top 3 in 2 years while the forum itself is online since 2012.</p><p>Currently my main efforts are to maintain the most stable and optimized code as possible because this plugin is used on servers with more than 100 players connected, performance is a priority in these cases.</p><p>The most difficult task is to give support to customers because a lot of them find it easier to contact me without reading the official tutorials nor asking to the other community members and this sadly cuts a lot of the development time.
+I&#x27;d love to spend more time on actually coding the plugin.<br/>
+Sadly most of them blackmail me with 1 star reviews which is making this situation really hard to maintain in the long term. </p><h2>The future</h2><p>Back in the day I rushed a lot of ItemsAdder features initial planning, this resulted in non-balanced default stats and gameplay, this is why I&#x27;m currently working with some friends to rebalance the default items pack and provide a better gameplay.<br/>
+This is a very long task due to the fact that this plugin offers more than 500 default items/materials/blocks but I&#x27;ll do my best to release an updated pack before mid 2022.<br/>
+I also plan to hook into the Minecraft gameplay itself and fix all the unbalanced features of the vanilla gameplay. Sadly this game has a lot of flaws which allow users to <a href="https://www.speedrun.com/mc/run/zq13899m">speedrun it in no time</a>.</p><p>One of the last important tasks I have scheduled is to find a proper way to avoid spamming customers which are contacting me everyday to ask basic questions. Right now I have no solution as this is the problem every developer has on this community.</p>]]></content:encoded>
+        </item>
+    </channel>
+</rss>
