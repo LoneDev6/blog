@@ -8,18 +8,6 @@
     <subtitle>LoneDev's Blog Blog</subtitle>
     <icon>https://blog.devs.beer/img/favicon.png</icon>
     <entry>
-        <title type="html"><![CDATA[First blog post]]></title>
-        <id>first-post</id>
-        <link href="https://blog.devs.beer/blog/first-post"/>
-        <updated>2021-12-14T00:00:00.000Z</updated>
-        <summary type="html"><![CDATA[Welcome to my blog!]]></summary>
-        <content type="html"><![CDATA[<p>Welcome to my blog!</p>]]></content>
-        <author>
-            <name>LoneDev</name>
-            <uri>https://github.com/lonedev6</uri>
-        </author>
-    </entry>
-    <entry>
         <title type="html"><![CDATA[The future of ItemsAdder]]></title>
         <id>future-of-itemsadder</id>
         <link href="https://blog.devs.beer/blog/future-of-itemsadder"/>
@@ -31,7 +19,7 @@ ItemsAdder is in the <a href="https://i.imgur.com/m3edZ8T.png">top 3</a> of the 
 I&#x27;d love to spend more time on actually coding the plugin.<br/>
 Sadly most of them blackmail me with 1 star reviews which is making this situation really hard to maintain in the long term. </p><h2>The future</h2><p>Back in the day I rushed a lot of ItemsAdder features initial planning, this resulted in non-balanced default stats and gameplay, this is why I&#x27;m currently working with some friends to rebalance the default items pack and provide a better gameplay.<br/>
 This is a very long task due to the fact that this plugin offers more than 500 default items/materials/blocks but I&#x27;ll do my best to release an updated pack before mid 2022.<br/>
-I also plan to hook into the Minecraft gameplay itself and fix all the unbalanced features of the vanilla gameplay. Sadly this game has a lot of flaws which allow users to <a href="https://www.speedrun.com/mc/run/zq13899m">speedrun it in no time</a>.</p><p>One of the last important tasks I have scheduled is to find a proper way to avoid spamming customers which are contacting me everyday to ask basic questions. Right now I have no solution as this is the problem every developer has on this community.</p>]]></content>
+I also plan to hook into the Minecraft gameplay itself and fix all the unbalanced features of the vanilla gameplay. Sadly this game has a lot of flaws which allow users to <a href="https://www.speedrun.com/mc/run/zq13899m">speedrun it in no time</a>.</p><p>One of the last important tasks I have scheduled is to find a proper way to avoid spamming customers which are contacting me everyday to ask basic questions. Right now I have no solution as this is the problem every developer has with this community.</p>]]></content>
         <author>
             <name>LoneDev</name>
             <uri>https://github.com/lonedev6</uri>
