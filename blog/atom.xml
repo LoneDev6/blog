@@ -2,11 +2,140 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://blog.devs.beer/blog</id>
     <title>LoneDev's Blog Blog</title>
-    <updated>2021-12-14T00:00:00.000Z</updated>
+    <updated>2021-12-22T00:00:00.000Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://blog.devs.beer/blog"/>
     <subtitle>LoneDev's Blog Blog</subtitle>
     <icon>https://blog.devs.beer/img/favicon.png</icon>
+    <entry>
+        <title type="html"><![CDATA[Spam email auto-removal]]></title>
+        <id>spam-emails-auto-removal</id>
+        <link href="https://blog.devs.beer/blog/spam-emails-auto-removal"/>
+        <updated>2021-12-22T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Spam emails]]></summary>
+        <content type="html"><![CDATA[<h2><img src="icon.png"/> Spam emails</h2><p><img src="imgs/meme.png"/></p><p>If you hate seeing this little number on your Gmail Spam folder, then you will find this article useful.</p><p><img src="imgs/1.png"/></p><p>Sometimes you may receive important emails and they end up being flagged as spam by Gmail, so you probably check this folder daily to make sure no email got mistakely flagged, but you end up seeing:</p><ul><li>meet single Russians</li><li>click here to get 1000$</li><li>your package is going to be delivered, you have to pay the shipping</li><li>and so on...</li></ul><h2>Google Script</h2><ol><li>Visit <a href="https://script.google.com/">script.google.com</a> and create a new <strong>Google Apps Script</strong> for Gmail.</li><li>Choose to create a script for a Blank Project.</li></ol><p><img src="imgs/2.png"/></p><h2>Copying the code</h2><p>Copy and paste this code into the <strong>Code.gs</strong> file (click the <strong>copy</strong> button on the right):</p><pre><code class="language-jsx" metastring="title=&quot;Code.js&quot;" title="&quot;Code.js&quot;">  var nice = [
+//#region Filter
+
+&quot;storage.googleapis.com/&quot;, // Scams usually use google apis to make their shitty clickable links.
+
+&quot;clevernessoven.com&quot;,
+&quot;dissingconnivance.com&quot;,
+&quot;vuroc.com&quot;,
+&quot;siatave.com&quot;,
+&quot;1dznhmvbvg-------------------------.com &quot;,
+&quot;lxuagolwx.us&quot;,
+&quot;unionsecret.com&quot;,
+&quot;redeemsexcavate.com&quot;,
+&quot;wuszofvbw.us&quot;,
+&quot;augustdot.com&quot;,
+&quot;xhmdefmwyvniad.org&quot;,
+&quot;scorchedca.eu.org&quot;,
+&quot;ipptr.com&quot;,
+&quot;ip-pool.com&quot;,
+&quot;cryptcapitalgroup.com&quot;,
+&quot;attentivenessfeather.com&quot;,
+&quot;titansvision.com&quot;,
+&quot;digitalincome24x7.com&quot;,
+&quot;stockscapitalgroup.com&quot;,
+&quot;war7xg31l--.com&quot;,
+&quot;infancyboy.com&quot;,
+&quot;dreamsatisfaction.com&quot;,
+&quot;serverclienti.com&quot;,
+&quot;coppel.com&quot;,
+&quot;larkbutterfly.com&quot;,
+&quot;divestaxiom.com&quot;,
+&quot;thebtcinvestment.com&quot;,
+&quot;ljciyzhupg-----------pgbuek-.com&quot;,
+&quot;exchangevisitcompany.com&quot;,
+&quot;pgbuek-.com&quot;,
+&quot;bruntheavy.com&quot;,
+&quot;mail-getresponse.com&quot;,
+&quot;sharepointonline.com&quot;,
+&quot;faycushion.com&quot;,
+&quot;ikexpress.com&quot;,
+&quot;jcom.zaq.ne.jp&quot;,
+&quot;key-data.co.uk&quot;,
+&quot;vwyorfr.us&quot;,
+&quot;qgdahhw.us&quot;,
+&quot;pnkqrev.us&quot;,
+&quot;wlnnnxx.us&quot;,
+&quot;friendlycabochon.com&quot;,
+&quot;naiado.com&quot;,
+&quot;emails-jobsdelivered.com&quot;,
+&quot;bvdxuzt.us&quot;,
+&quot;perrychristinejacobs.work&quot;,
+&quot;gpxxpdx.us&quot;,
+&quot;boxingsuit.org.uk&quot;,
+&quot;independantnewspaper.de&quot;,
+&quot;arqxkhu.us&quot;,
+&quot;flutterfleapit.com&quot;,
+&quot;wg6ur8-.com&quot;,
+&quot;5nakhak5x.us&quot;,
+&quot;riskchemicalproduct.org.uk&quot;,
+&quot;bestclassicmusic.org.uk&quot;,
+&quot;planningbrands.com&quot;,
+&quot;alpha-lt.net&quot;,
+&quot;amorphousanimus.com&quot;,
+
+&quot;Franklin Ave Ste&quot;,
+&quot;123 SE 3rd Ave. Suite 574, Miami&quot;,
+&quot;5960 South Land Park&quot;,
+&quot;Tvrdého 643 19900 Praha 9&quot;,
+&quot;928 S Dixie Hwy&quot;,
+&quot;34 N Franklin Ave Ste&quot;,
+&quot;Long Prairie Rd&quot;,
+&quot;Alicia Pkwy&quot;,
+&quot;Laguna Niguel&quot;,
+
+&quot;CITIBANK&quot;,
+&quot;Your Bank name&quot;,
+&quot;𝐩𝐫𝐨𝐬𝐭𝐚𝐭𝐞&quot;, // LOL
+
+&quot;LinkedIn Corporation&quot;
+//#endregion
+];
+
+
+//#region Logic
+function filterViaSpam() 
+{
+  var threads = GmailApp.getSpamThreads(0, 30);
+  for (var i = 0; i &lt; threads.length; i++) 
+  {
+    var messages=threads[i].getMessages();
+    for (var j = 0; j &lt; messages.length; j++) 
+    {
+      var message=messages[j];
+      var body=message.getRawContent();
+      if(check(body, nice))
+      {
+        GmailApp.moveThreadToTrash(threads[i]);
+        console.log(&quot;Found: &quot; + message.getSubject());
+      }
+      Utilities.sleep(1000);
+    }
+  }
+}
+function check(body, arr)
+{
+  for (var i = 0; i &lt; arr.length; i++) 
+  { 
+    if(body.indexOf(arr[i]) &gt;- 1)
+      return true;
+  }
+  return false;
+}
+//#endregion
+
+</code></pre><p>This code also includes a predefined set of rules I created during time.</p><h2>Automatically trigger the check</h2><p>Now click the stopwatch icon to set an automatic trigger for the previous code.
+<img src="imgs/3.png"/></p><p>And set the form values as I did.
+<img src="imgs/3.png"/></p><h2>Done, you&#x27;re free!</h2><p>Finally you can make sure only mistakely spam-marked can go into the Spam folder.<br/>
+Most scam emails will be automatically deleted each 10 minutes. </p><br/><br/><br/> Sources:<br/><p><a href="https://www.geektron.com/2014/01/how-to-filter-gmail-using-email-headers-and-stop-via-spam/">geektron.com</a></p>]]></content>
+        <author>
+            <name>LoneDev</name>
+            <uri>https://github.com/lonedev6</uri>
+        </author>
+    </entry>
     <entry>
         <title type="html"><![CDATA[The future of ItemsAdder]]></title>
         <id>future-of-itemsadder</id>
