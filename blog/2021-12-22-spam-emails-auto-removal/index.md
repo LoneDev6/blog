@@ -159,10 +159,12 @@ This code also includes a predefined set of rules I created during time.
 ## Automatically trigger the check
 
 Now click the stopwatch icon to set an automatic trigger for the previous code. 
+
 ![](<imgs/3.png>)
 
 And set the form values as I did.
-![](<imgs/3.png>)
+
+![](<imgs/4.png>)
 
 
 ## Done, you're free!
