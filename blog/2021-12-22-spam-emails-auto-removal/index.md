@@ -31,6 +31,9 @@ Sometimes you may receive important emails and they end up being flagged as spam
 ## Copying the code
 
 Copy and paste this code into the **Code.gs** file (click the **copy** button on the right):
+<details><summary>Click to show the code</summary>
+<p>
+
 ```jsx title="Code.js"
   var nice = [
 //#region Filter
@@ -147,6 +150,9 @@ function check(body, arr)
 //#endregion
 
 ```
+
+</p>
+</details>
 
 This code also includes a predefined set of rules I created during time.
 
