@@ -2,11 +2,38 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://blog.devs.beer/blog</id>
     <title>LoneDev's Blog Blog</title>
-    <updated>2021-12-22T00:00:00.000Z</updated>
+    <updated>2022-01-05T00:00:00.000Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://blog.devs.beer/blog"/>
     <subtitle>LoneDev's Blog Blog</subtitle>
     <icon>https://blog.devs.beer/img/favicon.png</icon>
+    <entry>
+        <title type="html"><![CDATA[Synology auto backup PC on night]]></title>
+        <id>synology-auto-backup-pc</id>
+        <link href="https://blog.devs.beer/blog/synology-auto-backup-pc"/>
+        <updated>2022-01-05T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Introduction]]></summary>
+        <content type="html"><![CDATA[<h2>Introduction</h2><p>I&#x27;ve always felt the need to backup my PC automatically without worrying about it.<br/>
+I also wanted to find a way to restore my PC disks without too much work in case one of them failed someday.<br/></p><p>I searched a lot online for a proper solution for this but I couldn&#x27;t find anything which was <strong>plug &amp; play</strong> (&amp; forget).</p><h2>My solution</h2><p>I bought a Synology NAS which supports <a href="https://www.synology.com/en-global/dsm/feature/active_backup_business">Active Backup for Business</a>.<br/>
+The only limitation is that this backup system lacks of a feature to get the PC turned on automatically before backup and turned off after backup, so I had to make an hack.</p><p>:::warning
+This tutorial was tested on <a href="https://www.synology.com/it-it/products/DS220+">DS220+</a> and on a PC with <strong>Windows 10</strong>.
+:::</p><h3>1. Setting up the Active Backup for Business app</h3><p>First of all you have to download it from the <strong>Package Center</strong>.<br/></p><p><img src="imgs/1.png"/></p><p>Then you can access it through the apps menu.</p><p><img src="imgs/2.png"/></p><p>Now add a new device, in this case your PC.</p><p><img src="imgs/3.png"/></p><p>Create a backup task for the Windows disk selecting <code>System volume</code> as type.</p><p><img src="imgs/4.png"/></p><p>Schedule it to be ran at 3.20AM each Monday.</p><p><img src="imgs/4_2.png"/></p><p>Create a backup task for your other disks selecting <code>Customized volume</code> as type.</p><p><img src="imgs/5.png"/></p><p>Schedule them/it to be ran at 3.20AM each Monday.</p><p><img src="imgs/4_2.png"/></p><h3>2. Setting up the Active Backup for Business Agent on Windows</h3><p>You also have to download the <a href="https://kb.synology.com/DSM/help/ActiveBackupBusinessAgent/activebackupbusinessagent">Agent app for Windows</a>, follow their installation tutorial.</p><h3>3. Scheduling automatic startup/shutdown of your Synology</h3><p>Open the <code>Control panel</code>, then open <code>Hardware &amp; Power</code>.<br/>
+Now create a new <code>Startup</code> task and set it to be executed at 3AM. We want to make sure the Synology NAS is turned on completely before backups.<br/>
+Create a new <code>Shut Down</code> task and set it to be executed at 7AM. We want make sure all backups are finished and let the NAS do its own things if needed (optimizing the drive, deleting old backups etc).</p><p><img src="imgs/6.png"/></p><h3>4. Scheduling automatic startup of your PC</h3><p>Open the <code>Control panel</code>, then open <code>Task Scheduler</code>.<br/>
+Now create a new task and set it to be executed at 3.10AM, we want to make sure the Synology NAS is turned on completely before turning on our PC or it can&#x27;t launch the command to turn on the PC.</p><p><img src="imgs/7.png"/>
+<img src="imgs/8.png"/></p><p>Now set the <code>User-defined script</code> to this command which will send a packet to the PC to turn it on.<br/>
+<code>synonet --wake 00:00:00:00:00:00 eth0;</code><br/>
+Instead of <code>00:00:00:00:00:00</code> you have to set your own PC mac address (search online how to get it).<br/>
+You can also set a notification email to know when the PC was turned on to create a backup.<br/></p><p><img src="imgs/9.png"/></p><p>:::warning
+Make sure to enable WakeOnLan on your motherboard, search online on how to do that (method changes on every PC).<br/>
+:::</p><h3>5. Scheduling automatic shutdown of your PC</h3><p>You have to use my own program in order to schedule an automatic shutdown of your PC after every backup is finished since <strong>Active Backup for Business</strong> Agent lacks of this feature. <br/>
+Download my program from my <a href="https://github.com/LoneDev6/ActiveBackupShutdown">Github repo</a> and schedule an automated task to run it on Windows startup.</p><h3>6. Done!</h3><p>I know this tutorial may not be really for beginners but I&#x27;d prefer to avoid spoonfeeding people.<br/>
+Good luck with your backups!</p>]]></content>
+        <author>
+            <name>LoneDev</name>
+            <uri>https://github.com/lonedev6</uri>
+        </author>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Spam email auto-removal]]></title>
         <id>spam-emails-auto-removal</id>
