@@ -33,7 +33,11 @@ Change the folder to a new one, for example I created a new profile folder calle
 
 ### 3. Install the optimization mod
 
-Download the mod [here](https://www.curseforge.com/minecraft/modpacks/fabulously-optimized/files/3559545)
+Download the mod [here](https://www.curseforge.com/minecraft/modpacks/fabulously-optimized/files/).<br />
+
+:::warning
+Select your version and make sure to download the "MultiMC" type.
+:::
 
 Open the zip and extract the folders `mods` and `config` inside your `.minecraft` folder (or inside the **Fabric** profile folder).
 
