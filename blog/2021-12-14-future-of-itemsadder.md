@@ -18,7 +18,7 @@ I abandoned the old project after a year or so due to personal life, but then I 
 
 ## Current days
 
-I didn't expect this much fame for that single product, the [max peak](https://bstats.org/plugin/bukkit/ItemsAdder/7023) of servers which use ItemsAdder amounts to **1097 max online servers** and **3800 max players** enjoying the plugin.<br />
+I didn't expect this much fame for that single product, the [max peak](https://pstats.devs.beer/plugin/bukkit/ItemsAdder/6) of servers which use ItemsAdder amounts to **1097 max online servers** and **3800 max players** enjoying the plugin.<br />
 ItemsAdder is in the [top 3](https://i.imgur.com/m3edZ8T.png) of the best voted paid Spigot plugins to this date, which is unbelievable, a plugin published in 2019 managed to reach the top 3 in 2 years while the forum itself is online since 2012.
 
 Currently my main efforts are to maintain the most stable and optimized code as possible because this plugin is used on servers with more than 100 players connected, performance is a priority in these cases.
