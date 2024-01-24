@@ -2,7 +2,7 @@
 slug: future-of-itemsadder
 title: The future of ItemsAdder
 authors: lonedev
-tags: [spigot, minecraft, plugin, development, java, itemsadder]
+tags: [spigot, minecraft, java, itemsadder, plugin, development, updates,]
 ---
 
 <!--truncate-->
