@@ -2,6 +2,7 @@
 // This will help to prevent a flash if dark mode is the default.
 
 (function() {
+  console.log("bro");
     // Change these if you use something different in your hook.
     var storageKey = 'darkMode';
     var classNameDark = 'dark-mode';
