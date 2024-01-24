@@ -5,6 +5,7 @@ import Link from '@docusaurus/Link';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import styles from './index.module.css';
 import HomepageFeatures from '../components/HomepageFeatures';
+import  { Redirect } from 'react-router-dom';
 
 function HomepageHeader() {
   const {siteConfig} = useDocusaurusContext();
@@ -26,14 +27,15 @@ function HomepageHeader() {
 }
 
 export default function Home() {
-  const {siteConfig} = useDocusaurusContext();
-  return (
-    <Layout
-      title={`Hello from ${siteConfig.title}`}
-      description="Personal blog of LoneDev">
-      <HomepageHeader />
-    </Layout>
-  );
+  // const {siteConfig} = useDocusaurusContext();
+  // return (
+  //   <Layout
+  //     title={`Hello from ${siteConfig.title}`}
+  //     description="Personal blog of LoneDev">
+  //     <HomepageHeader />
+  //   </Layout>
+  // );
+  return (<Redirect to='/blog' />);
 }
 
 // Insert this script in your index.html right after the <body> tag.
