@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkblog=self.webpackChunkblog||[]).push([[4195],{2841:function(n,u,e){e.r(u),e.d(u,{default:function(){return o}});var l=e(2389);function o(){return(0,l.Z)()&&(window.location.href="/blog"),null}}}]);

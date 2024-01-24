@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkblog=self.webpackChunkblog||[]).push([[3817],{7252:function(e){e.exports=JSON.parse('{"allTagsPath":"/blog/tags","slug":"/blog/tags/itemsadder","name":"itemsadder","count":1,"permalink":"/blog/tags/itemsadder"}')}}]);

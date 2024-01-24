@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkblog=self.webpackChunkblog||[]).push([[4893],{888:a=>{a.exports=JSON.parse('{"label":"minecraft","permalink":"/tags/minecraft","allTagsPath":"/tags","count":2,"unlisted":false}')}}]);

@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkblog=self.webpackChunkblog||[]).push([[1075],{3214:s=>{s.exports=JSON.parse('{"label":"spigot","permalink":"/tags/spigot","allTagsPath":"/tags","count":2,"unlisted":false}')}}]);
